@@ -1,0 +1,26 @@
+{
+  "name": "rgb-led-wifi",
+  "version": "1.0.0",
+  "description": "RGB led strip manager via wifi using a nodemcu chip with J5",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test-connection": "node ./src/test-connection.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmaSuriano/rgb-led-wifi.git"
+  },
+  "keywords": ["rgb", "wifi", "nodemcu", "j5"],
+  "author": "Emanuel Suriano",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EmaSuriano/rgb-led-wifi/issues"
+  },
+  "homepage": "https://github.com/EmaSuriano/rgb-led-wifi#readme",
+  "dependencies": {
+    "etherport": "^0.2.0",
+    "express": "^4.16.2",
+    "johnny-five": "^0.14.1"
+  }
+}
