@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import RgbManager from 'src/RgbManager';
+import RgbManager from '../RgbManager';
 
 const router = Router();
 const rgbManager = new RgbManager();

@@ -4,7 +4,7 @@
   "description": "RGB led strip manager via wifi using a nodemcu chip with J5",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --config webpack.config.server.js --mode development",
+    "start": "nodemon --exec babel-node src/index.js",
     "start-disable": "cross-env DISABLE_BOARD=true npm run start",
     "build": "webpack --config webpack.config.server.js --mode development",
     "test-connection": "node ./src/test-connection.js",
@@ -14,12 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/EmaSuriano/rgb-led-wifi.git"
   },
-  "keywords": [
-    "rgb",
-    "wifi",
-    "nodemcu",
-    "j5"
-  ],
+  "keywords": ["rgb", "wifi", "nodemcu", "j5"],
   "author": "Emanuel Suriano",
   "license": "MIT",
   "bugs": {
