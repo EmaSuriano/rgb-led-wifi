@@ -21,7 +21,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c2b55c1f2c2f27a6a796"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c073417da064ad5b72c3"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -766,11 +766,35 @@ eval("/* WEBPACK VAR INJECTION */(function(__resourceQuery) {/*\r\n\tMIT License
 /*!**************************************!*\
   !*** ./src/RgbManager/RgbManager.js ***!
   \**************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n// import storage from './storage';\n// import Board from './board';\n// import env from './env';\n\nvar RgbManager = function () {\n  function RgbManager() {\n    // this.board = new Board();\n    // this.storage = new Storage();\n\n    _classCallCheck(this, RgbManager);\n  }\n\n  _createClass(RgbManager, [{\n    key: 'color',\n    get: function get() {\n      return 'red';\n    },\n    set: function set(color) {\n      console.log(color);\n    }\n  }]);\n\n  return RgbManager;\n}();\n\n// const board = new Board();\n\n// const getColor = storage.getColor;\n\n// const changeColor = async color => {\n//   if (!env.DISABLE_BOARD) await board.setColor(color);\n//   await storage.saveColor(newPosition);\n// };\n\n// const getConnectionStatus = board.getStatus;\n\n// export default {\n//   getColor,\n//   changeColor,\n//   getConnectionStatus,\n// };\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (RgbManager);\n\n//# sourceURL=webpack:///./src/RgbManager/RgbManager.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _Storage = __webpack_require__(/*! ./Storage */ \"./src/RgbManager/Storage/index.js\");\n\nvar _Storage2 = _interopRequireDefault(_Storage);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n// import Board from './board';\n// import env from './env';\n\nvar RgbManager = function () {\n  function RgbManager() {\n    _classCallCheck(this, RgbManager);\n\n    // this.board = new Board();\n    this.storage = new _Storage2.default();\n  }\n\n  _createClass(RgbManager, [{\n    key: 'getColor',\n    value: function () {\n      var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {\n        var color;\n        return regeneratorRuntime.wrap(function _callee$(_context) {\n          while (1) {\n            switch (_context.prev = _context.next) {\n              case 0:\n                _context.next = 2;\n                return this.storage.getColor();\n\n              case 2:\n                color = _context.sent;\n\n                console.log(color);\n                // console.log(this.storage.color);\n                return _context.abrupt('return', color);\n\n              case 5:\n              case 'end':\n                return _context.stop();\n            }\n          }\n        }, _callee, this);\n      }));\n\n      function getColor() {\n        return _ref.apply(this, arguments);\n      }\n\n      return getColor;\n    }()\n  }, {\n    key: 'setColor',\n    value: function () {\n      var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(color) {\n        return regeneratorRuntime.wrap(function _callee2$(_context2) {\n          while (1) {\n            switch (_context2.prev = _context2.next) {\n              case 0:\n                _context2.next = 2;\n                return this.storage.setColor(color);\n\n              case 2:\n                return _context2.abrupt('return', color);\n\n              case 3:\n              case 'end':\n                return _context2.stop();\n            }\n          }\n        }, _callee2, this);\n      }));\n\n      function setColor(_x) {\n        return _ref2.apply(this, arguments);\n      }\n\n      return setColor;\n    }()\n  }]);\n\n  return RgbManager;\n}();\n\n// const board = new Board();\n\n// const getColor = storage.getColor;\n\n// const changeColor = async color => {\n//   if (!env.DISABLE_BOARD) await board.setColor(color);\n//   await storage.saveColor(newPosition);\n// };\n\n// const getConnectionStatus = board.getStatus;\n\n// export default {\n//   getColor,\n//   changeColor,\n//   getConnectionStatus,\n// };\n\n\nexports.default = RgbManager;\n\n//# sourceURL=webpack:///./src/RgbManager/RgbManager.js?");
+
+/***/ }),
+
+/***/ "./src/RgbManager/Storage/Storage.js":
+/*!*******************************************!*\
+  !*** ./src/RgbManager/Storage/Storage.js ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i[\"return\"]) _i[\"return\"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError(\"Invalid attempt to destructure non-iterable instance\"); } }; }();\n\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nvar _nedbPromise = __webpack_require__(/*! nedb-promise */ \"nedb-promise\");\n\nvar _nedbPromise2 = _interopRequireDefault(_nedbPromise);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n// import { withDebugHOF } from './utils';\n// const { ERROR_MESSAGE, DEBUG } = require('./constants');\n\nvar Storage = function () {\n  function Storage() {\n    _classCallCheck(this, Storage);\n\n    this.db = (0, _nedbPromise2.default)({\n      filename: './database.db',\n      autoload: true\n    });\n  }\n\n  _createClass(Storage, [{\n    key: 'getColor',\n    value: function () {\n      var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {\n        var _ref2, _ref3, record;\n\n        return regeneratorRuntime.wrap(function _callee$(_context) {\n          while (1) {\n            switch (_context.prev = _context.next) {\n              case 0:\n                _context.prev = 0;\n                _context.next = 3;\n                return this.db.cfind({}).sort({ dateTime: -1 }).limit(1).exec();\n\n              case 3:\n                _ref2 = _context.sent;\n                _ref3 = _slicedToArray(_ref2, 1);\n                record = _ref3[0];\n                return _context.abrupt('return', record.color);\n\n              case 9:\n                _context.prev = 9;\n                _context.t0 = _context['catch'](0);\n                throw new Error(_context.t0);\n\n              case 12:\n              case 'end':\n                return _context.stop();\n            }\n          }\n        }, _callee, this, [[0, 9]]);\n      }));\n\n      function getColor() {\n        return _ref.apply(this, arguments);\n      }\n\n      return getColor;\n    }()\n\n    // get color() {\n    //   return new Promise((res, rej) => {\n    //     this.db\n    //       .cfind({})\n    //       .sort({ dateTime: -1 })\n    //       .limit(1)\n    //       .exec()\n    //       .then(([{ color }]) => {\n    //         console.log(color);\n    //         res(color);\n    //       });\n    //   });\n    // }\n\n  }, {\n    key: 'setColor',\n    value: function () {\n      var _ref4 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(color) {\n        var colorRecord;\n        return regeneratorRuntime.wrap(function _callee2$(_context2) {\n          while (1) {\n            switch (_context2.prev = _context2.next) {\n              case 0:\n                colorRecord = { color: color, dateTime: Date.now() };\n\n                console.log(colorRecord);\n                _context2.prev = 2;\n                _context2.next = 5;\n                return this.db.insert(colorRecord);\n\n              case 5:\n                _context2.next = 10;\n                break;\n\n              case 7:\n                _context2.prev = 7;\n                _context2.t0 = _context2['catch'](2);\n                throw new Error(_context2.t0);\n\n              case 10:\n              case 'end':\n                return _context2.stop();\n            }\n          }\n        }, _callee2, this, [[2, 7]]);\n      }));\n\n      function setColor(_x) {\n        return _ref4.apply(this, arguments);\n      }\n\n      return setColor;\n    }()\n\n    // const getPosition = async () => {\n    //   try {\n    //     const document = await db\n    //       .cfind({})\n    //       .sort({ dateTime: -1 })\n    //       .limit(1)\n    //       .exec();\n\n    //     return document[0].position;\n    //   } catch (error) {\n    //     throw new Error(ERROR_MESSAGE.DATABASE_GET_ERROR);\n    //   }\n    // };\n\n    // const setPosition = async position => {\n    //   try {\n    //     const newPositionRecord = { position, dateTime: Date.now() };\n    //     await db.insert(newPositionRecord);\n    //     return position;\n    //   } catch (error) {\n    //     throw new Error(ERROR_MESSAGE.DATABASE_INSERT_ERROR);\n    //   }\n    // };\n\n  }]);\n\n  return Storage;\n}();\n\n// export default {\n//   getPosition: withDebugHOF(getPosition),\n//   setPosition: withDebugHOF(setPosition),\n// };\n\n// export default {\n//   getPosition,\n//   setPosition,\n// };\n\n\nexports.default = Storage;\n\n//# sourceURL=webpack:///./src/RgbManager/Storage/Storage.js?");
+
+/***/ }),
+
+/***/ "./src/RgbManager/Storage/index.js":
+/*!*****************************************!*\
+  !*** ./src/RgbManager/Storage/index.js ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _Storage = __webpack_require__(/*! ./Storage */ \"./src/RgbManager/Storage/Storage.js\");\n\nvar _Storage2 = _interopRequireDefault(_Storage);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = _Storage2.default;\n\n//# sourceURL=webpack:///./src/RgbManager/Storage/index.js?");
 
 /***/ }),
 
@@ -778,11 +802,11 @@ eval("__webpack_require__.r(__webpack_exports__);\nvar _createClass = function (
 /*!*********************************!*\
   !*** ./src/RgbManager/index.js ***!
   \*********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _RgbManager__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RgbManager */ \"./src/RgbManager/RgbManager.js\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_RgbManager__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n\n//# sourceURL=webpack:///./src/RgbManager/index.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _RgbManager = __webpack_require__(/*! ./RgbManager */ \"./src/RgbManager/RgbManager.js\");\n\nvar _RgbManager2 = _interopRequireDefault(_RgbManager);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = _RgbManager2.default;\n\n//# sourceURL=webpack:///./src/RgbManager/index.js?");
 
 /***/ }),
 
@@ -790,11 +814,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Rgb
 /*!******************************!*\
   !*** ./src/Routers/Color.js ***!
   \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var src_RgbManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/RgbManager */ \"./src/RgbManager/index.js\");\n\n\n\nvar router = Object(express__WEBPACK_IMPORTED_MODULE_0__[\"Router\"])();\nvar rgbManager = new src_RgbManager__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n\nrouter.get('/', function (req, res) {\n  var color = rgbManager.color;\n  res.send({\n    color: color\n  });\n});\n\nrouter.post('/', function (req, res) {\n  rgbManager.color(req.color);\n  res.status(500);\n});\n\n// app\n//   .route('/color')\n//   .get(function(req, res) {\n//     const color = rgbManager.color;\n//     res.send({\n//       color,\n//     });\n//   })\n//   .post(function(req, res) {\n//     res.send('Add a book');\n//   })\n//   .put(function(req, res) {\n//     res.send('Update the book');\n//   });\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (router);\n\n//# sourceURL=webpack:///./src/Routers/Color.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _express = __webpack_require__(/*! express */ \"express\");\n\nvar _RgbManager = __webpack_require__(/*! src/RgbManager */ \"./src/RgbManager/index.js\");\n\nvar _RgbManager2 = _interopRequireDefault(_RgbManager);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step(\"next\", value); }, function (err) { step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\nvar router = (0, _express.Router)();\nvar rgbManager = new _RgbManager2.default();\n\nrouter.get('/', function () {\n  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee(req, res) {\n    var color;\n    return regeneratorRuntime.wrap(function _callee$(_context) {\n      while (1) {\n        switch (_context.prev = _context.next) {\n          case 0:\n            _context.next = 2;\n            return rgbManager.getColor();\n\n          case 2:\n            color = _context.sent;\n\n            res.send({\n              color: color\n            });\n\n          case 4:\n          case 'end':\n            return _context.stop();\n        }\n      }\n    }, _callee, undefined);\n  }));\n\n  return function (_x, _x2) {\n    return _ref.apply(this, arguments);\n  };\n}());\n\nrouter.put('/', function () {\n  var _ref2 = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee2(req, res) {\n    var rgb;\n    return regeneratorRuntime.wrap(function _callee2$(_context2) {\n      while (1) {\n        switch (_context2.prev = _context2.next) {\n          case 0:\n            rgb = req.param('rgb');\n\n            if (rgb) {\n              _context2.next = 3;\n              break;\n            }\n\n            throw new Error('Please send rgb parameter!');\n\n          case 3:\n            console.log(rgb);\n            _context2.next = 6;\n            return rgbManager.setColor(rgb);\n\n          case 6:\n            res.status(200).send({ color: rgb });\n\n          case 7:\n          case 'end':\n            return _context2.stop();\n        }\n      }\n    }, _callee2, undefined);\n  }));\n\n  return function (_x3, _x4) {\n    return _ref2.apply(this, arguments);\n  };\n}());\n\nexports.default = router;\n\n//# sourceURL=webpack:///./src/Routers/Color.js?");
 
 /***/ }),
 
@@ -802,11 +826,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var expr
 /*!*************************************!*\
   !*** ./src/Routers/ErrorHandler.js ***!
   \*************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar ErroHandler = function ErroHandler(error, req, res, next) {\n  console.error('Something happened');\n  res.json({ message: error.message });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ErroHandler);\n\n//# sourceURL=webpack:///./src/Routers/ErrorHandler.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nvar ErroHandler = function ErroHandler(error, req, res, next) {\n  console.error('Something happened');\n  res.status(400).json({ message: error.message });\n};\n\nexports.default = ErroHandler;\n\n//# sourceURL=webpack:///./src/Routers/ErrorHandler.js?");
 
 /***/ }),
 
@@ -814,11 +838,11 @@ eval("__webpack_require__.r(__webpack_exports__);\nvar ErroHandler = function Er
 /*!******************************!*\
   !*** ./src/Routers/index.js ***!
   \******************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Color */ \"./src/Routers/Color.js\");\n/* harmony import */ var _ErrorHandler__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ErrorHandler */ \"./src/Routers/ErrorHandler.js\");\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  Color: _Color__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  ErrorHandler: _ErrorHandler__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n});\n\n//# sourceURL=webpack:///./src/Routers/index.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _Color = __webpack_require__(/*! ./Color */ \"./src/Routers/Color.js\");\n\nvar _Color2 = _interopRequireDefault(_Color);\n\nvar _ErrorHandler = __webpack_require__(/*! ./ErrorHandler */ \"./src/Routers/ErrorHandler.js\");\n\nvar _ErrorHandler2 = _interopRequireDefault(_ErrorHandler);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nexports.default = {\n  Color: _Color2.default,\n  ErrorHandler: _ErrorHandler2.default\n};\n\n//# sourceURL=webpack:///./src/Routers/index.js?");
 
 /***/ }),
 
@@ -826,11 +850,11 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Col
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var http__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! http */ \"http\");\n/* harmony import */ var http__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(http__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _server__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./server */ \"./src/server.js\");\n\n\n\nvar server = Object(http__WEBPACK_IMPORTED_MODULE_0__[\"createServer\"])(_server__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\nvar currentApp = _server__WEBPACK_IMPORTED_MODULE_1__[\"default\"];\nserver.listen(3000);\n\nif (true) {\n  module.hot.accept(/*! ./server */ \"./src/server.js\", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { /* harmony import */ _server__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./server */ \"./src/server.js\");\n(function () {\n    server.removeListener('request', currentApp);\n    server.on('request', _server__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n    currentApp = _server__WEBPACK_IMPORTED_MODULE_1__[\"default\"];\n  })(__WEBPACK_OUTDATED_DEPENDENCIES__); });\n}\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _http = __webpack_require__(/*! http */ \"http\");\n\nvar _server = __webpack_require__(/*! ./server */ \"./src/server.js\");\n\nvar _server2 = _interopRequireDefault(_server);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar server = (0, _http.createServer)(_server2.default);\nvar currentApp = _server2.default;\nserver.listen(3000);\n\nif (true) {\n  module.hot.accept(/*! ./server */ \"./src/server.js\", function(__WEBPACK_OUTDATED_DEPENDENCIES__) { (function () {\n    server.removeListener('request', currentApp);\n    server.on('request', _server2.default);\n    currentApp = _server2.default;\n  })(__WEBPACK_OUTDATED_DEPENDENCIES__); });\n}\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -838,22 +862,33 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var http
 /*!***********************!*\
   !*** ./src/server.js ***!
   \***********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Routers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Routers */ \"./src/Routers/index.js\");\n\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\napp.use('/color', _Routers__WEBPACK_IMPORTED_MODULE_1__[\"default\"].Color);\napp.use(_Routers__WEBPACK_IMPORTED_MODULE_1__[\"default\"].ErrorHandler);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (app);\n\n//# sourceURL=webpack:///./src/server.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n\nvar _express = __webpack_require__(/*! express */ \"express\");\n\nvar _express2 = _interopRequireDefault(_express);\n\nvar _Routers = __webpack_require__(/*! ./Routers */ \"./src/Routers/index.js\");\n\nvar _Routers2 = _interopRequireDefault(_Routers);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar app = (0, _express2.default)();\n\napp.use('/color', _Routers2.default.Color);\n// app.use(Routers.ErrorHandler);\n\napp.get('/about', function (req, res) {\n  res.send('About birds3');\n});\n\napp.use(function (err, req, res, next) {\n  console.error(err.stack);\n  res.status(500).send('Something broke!');\n});\n\nexports.default = app;\n\n//# sourceURL=webpack:///./src/server.js?");
 
 /***/ }),
 
 /***/ 0:
-/*!***********************************************!*\
-  !*** multi webpack/hot/poll?1000 ./src/index ***!
-  \***********************************************/
+/*!**************************************************************!*\
+  !*** multi babel-polyfill webpack/hot/poll?1000 ./src/index ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! webpack/hot/poll?1000 */\"./node_modules/webpack/hot/poll.js?1000\");\nmodule.exports = __webpack_require__(/*! ./src/index */\"./src/index.js\");\n\n\n//# sourceURL=webpack:///multi_webpack/hot/poll?");
+eval("__webpack_require__(/*! babel-polyfill */\"babel-polyfill\");\n__webpack_require__(/*! webpack/hot/poll?1000 */\"./node_modules/webpack/hot/poll.js?1000\");\nmodule.exports = __webpack_require__(/*! ./src/index */\"./src/index.js\");\n\n\n//# sourceURL=webpack:///multi_babel-polyfill_webpack/hot/poll?");
+
+/***/ }),
+
+/***/ "babel-polyfill":
+/*!*********************************!*\
+  !*** external "babel-polyfill" ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"babel-polyfill\");\n\n//# sourceURL=webpack:///external_%22babel-polyfill%22?");
 
 /***/ }),
 
@@ -876,6 +911,17 @@ eval("module.exports = require(\"express\");\n\n//# sourceURL=webpack:///externa
 /***/ (function(module, exports) {
 
 eval("module.exports = require(\"http\");\n\n//# sourceURL=webpack:///external_%22http%22?");
+
+/***/ }),
+
+/***/ "nedb-promise":
+/*!*******************************!*\
+  !*** external "nedb-promise" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"nedb-promise\");\n\n//# sourceURL=webpack:///external_%22nedb-promise%22?");
 
 /***/ })
 

@@ -1,19 +1,24 @@
-// import storage from './storage';
+import Storage from './Storage';
 // import Board from './board';
 // import env from './env';
 
 export default class RgbManager {
   constructor() {
     // this.board = new Board();
-    // this.storage = new Storage();
+    this.storage = new Storage();
   }
 
-  get color() {
-    return 'red';
-  }
-
-  set color(color) {
+  async getColor() {
+    const color = await this.storage.getColor();
     console.log(color);
+    // console.log(this.storage.color);
+    return color;
+  }
+
+  async setColor(color) {
+    await this.storage.setColor(color);
+
+    return color;
   }
 }
 
