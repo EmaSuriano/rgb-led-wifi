@@ -21,7 +21,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "bbce40281fef304a0dd1"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c2b55c1f2c2f27a6a796"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -762,6 +762,66 @@ eval("/* WEBPACK VAR INJECTION */(function(__resourceQuery) {/*\r\n\tMIT License
 
 /***/ }),
 
+/***/ "./src/RgbManager/RgbManager.js":
+/*!**************************************!*\
+  !*** ./src/RgbManager/RgbManager.js ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if (\"value\" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();\n\nfunction _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError(\"Cannot call a class as a function\"); } }\n\n// import storage from './storage';\n// import Board from './board';\n// import env from './env';\n\nvar RgbManager = function () {\n  function RgbManager() {\n    // this.board = new Board();\n    // this.storage = new Storage();\n\n    _classCallCheck(this, RgbManager);\n  }\n\n  _createClass(RgbManager, [{\n    key: 'color',\n    get: function get() {\n      return 'red';\n    },\n    set: function set(color) {\n      console.log(color);\n    }\n  }]);\n\n  return RgbManager;\n}();\n\n// const board = new Board();\n\n// const getColor = storage.getColor;\n\n// const changeColor = async color => {\n//   if (!env.DISABLE_BOARD) await board.setColor(color);\n//   await storage.saveColor(newPosition);\n// };\n\n// const getConnectionStatus = board.getStatus;\n\n// export default {\n//   getColor,\n//   changeColor,\n//   getConnectionStatus,\n// };\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (RgbManager);\n\n//# sourceURL=webpack:///./src/RgbManager/RgbManager.js?");
+
+/***/ }),
+
+/***/ "./src/RgbManager/index.js":
+/*!*********************************!*\
+  !*** ./src/RgbManager/index.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _RgbManager__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./RgbManager */ \"./src/RgbManager/RgbManager.js\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (_RgbManager__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n\n//# sourceURL=webpack:///./src/RgbManager/index.js?");
+
+/***/ }),
+
+/***/ "./src/Routers/Color.js":
+/*!******************************!*\
+  !*** ./src/Routers/Color.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var src_RgbManager__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/RgbManager */ \"./src/RgbManager/index.js\");\n\n\n\nvar router = Object(express__WEBPACK_IMPORTED_MODULE_0__[\"Router\"])();\nvar rgbManager = new src_RgbManager__WEBPACK_IMPORTED_MODULE_1__[\"default\"]();\n\nrouter.get('/', function (req, res) {\n  var color = rgbManager.color;\n  res.send({\n    color: color\n  });\n});\n\nrouter.post('/', function (req, res) {\n  rgbManager.color(req.color);\n  res.status(500);\n});\n\n// app\n//   .route('/color')\n//   .get(function(req, res) {\n//     const color = rgbManager.color;\n//     res.send({\n//       color,\n//     });\n//   })\n//   .post(function(req, res) {\n//     res.send('Add a book');\n//   })\n//   .put(function(req, res) {\n//     res.send('Update the book');\n//   });\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (router);\n\n//# sourceURL=webpack:///./src/Routers/Color.js?");
+
+/***/ }),
+
+/***/ "./src/Routers/ErrorHandler.js":
+/*!*************************************!*\
+  !*** ./src/Routers/ErrorHandler.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nvar ErroHandler = function ErroHandler(error, req, res, next) {\n  console.error('Something happened');\n  res.json({ message: error.message });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ErroHandler);\n\n//# sourceURL=webpack:///./src/Routers/ErrorHandler.js?");
+
+/***/ }),
+
+/***/ "./src/Routers/index.js":
+/*!******************************!*\
+  !*** ./src/Routers/index.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Color__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Color */ \"./src/Routers/Color.js\");\n/* harmony import */ var _ErrorHandler__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ErrorHandler */ \"./src/Routers/ErrorHandler.js\");\n\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  Color: _Color__WEBPACK_IMPORTED_MODULE_0__[\"default\"],\n  ErrorHandler: _ErrorHandler__WEBPACK_IMPORTED_MODULE_1__[\"default\"]\n});\n\n//# sourceURL=webpack:///./src/Routers/index.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -782,7 +842,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var http
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\napp.get('/api', function (req, res) {\n  res.send({\n    message: 'I am a server route and can also be hot supa reloaded!'\n  });\n});\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (app);\n\n//# sourceURL=webpack:///./src/server.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Routers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Routers */ \"./src/Routers/index.js\");\n\n\n\nvar app = express__WEBPACK_IMPORTED_MODULE_0___default()();\napp.use('/color', _Routers__WEBPACK_IMPORTED_MODULE_1__[\"default\"].Color);\napp.use(_Routers__WEBPACK_IMPORTED_MODULE_1__[\"default\"].ErrorHandler);\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (app);\n\n//# sourceURL=webpack:///./src/server.js?");
 
 /***/ }),
 

@@ -14,7 +14,12 @@
     "type": "git",
     "url": "git+https://github.com/EmaSuriano/rgb-led-wifi.git"
   },
-  "keywords": ["rgb", "wifi", "nodemcu", "j5"],
+  "keywords": [
+    "rgb",
+    "wifi",
+    "nodemcu",
+    "j5"
+  ],
   "author": "Emanuel Suriano",
   "license": "MIT",
   "bugs": {
@@ -22,6 +27,7 @@
   },
   "homepage": "https://github.com/EmaSuriano/rgb-led-wifi#readme",
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
@@ -31,11 +37,13 @@
     "express": "^4.16.2",
     "firmata": "^0.19.1",
     "johnny-five": "^0.14.1",
+    "nedb-promise": "^2.0.1",
     "start-server-webpack-plugin": "^2.2.1",
     "webpack": "^4.0.0",
     "webpack-node-externals": "^1.6.0"
   },
   "devDependencies": {
+    "babel-plugin-module-resolver": "^3.1.0",
     "webpack-cli": "^2.0.9"
   }
 }

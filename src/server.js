@@ -1,10 +1,8 @@
 import express from 'express';
+import Routers from './Routers';
 
 const app = express();
-app.get('/api', (req, res) => {
-  res.send({
-    message: 'I am a server route and can also be hot supa reloaded!',
-  });
-});
+app.use('/color', Routers.Color);
+app.use(Routers.ErrorHandler);
 
 export default app;

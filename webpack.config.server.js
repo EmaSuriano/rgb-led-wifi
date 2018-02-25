@@ -36,4 +36,9 @@ module.exports = {
     path: path.join(__dirname, '.build'),
     filename: 'server.js',
   },
+  resolve: {
+    alias: {
+      src: path.resolve(__dirname, 'src/'),
+    },
+  },
 };
