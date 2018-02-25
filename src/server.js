@@ -3,8 +3,16 @@ import Routers from './Routers';
 
 const app = express();
 
+app.get('/about', function(req, res) {
+  res.send('About birds');
+});
+
+app.use((error, req, res, next) => {
+  console.error('Something happened');
+  res.status(400).json({ message: error.message });
+});
+
 app.use('/color', Routers.Color);
-app.use(Routers.ErrorHandler);
 
 // app.get('/about', function(req, res) {
 //   res.send('About birds');

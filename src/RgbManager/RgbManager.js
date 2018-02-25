@@ -10,8 +10,6 @@ export default class RgbManager {
 
   async getColor() {
     const color = await this.storage.getColor();
-    console.log(color);
-    // console.log(this.storage.color);
     return color;
   }
 
@@ -21,20 +19,3 @@ export default class RgbManager {
     return color;
   }
 }
-
-// const board = new Board();
-
-// const getColor = storage.getColor;
-
-// const changeColor = async color => {
-//   if (!env.DISABLE_BOARD) await board.setColor(color);
-//   await storage.saveColor(newPosition);
-// };
-
-// const getConnectionStatus = board.getStatus;
-
-// export default {
-//   getColor,
-//   changeColor,
-//   getConnectionStatus,
-// };

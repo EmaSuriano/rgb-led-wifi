@@ -5,6 +5,7 @@ const router = Router();
 const rgbManager = new RgbManager();
 
 router.get('/', async (req, res) => {
+  throw new Error('alkjsdhlaksjd');
   const color = await rgbManager.getColor();
   res.send({
     color,
